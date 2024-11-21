@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		34E49D652CE6F66700D2E1BD /* Patient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E49D612CE6F66700D2E1BD /* Patient+CoreDataClass.swift */; };
+		34E49D662CE6F66700D2E1BD /* ManagedProblem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E49D602CE6F66700D2E1BD /* ManagedProblem+CoreDataProperties.swift */; };
+		34E49D672CE6F66700D2E1BD /* Patient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E49D622CE6F66700D2E1BD /* Patient+CoreDataProperties.swift */; };
+		34E49D682CE6F66700D2E1BD /* ProgressNote+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E49D632CE6F66700D2E1BD /* ProgressNote+CoreDataClass.swift */; };
+		34E49D692CE6F66700D2E1BD /* ProgressNote+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E49D642CE6F66700D2E1BD /* ProgressNote+CoreDataProperties.swift */; };
+		34E49D6A2CE6F66700D2E1BD /* ManagedProblem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E49D5F2CE6F66700D2E1BD /* ManagedProblem+CoreDataClass.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		340B81282CD186CE006A9750 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +36,12 @@
 		340B81122CD186CD006A9750 /* Progress Note 2.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Progress Note 2.1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B81272CD186CE006A9750 /* Progress Note 2.1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Progress Note 2.1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		340B81312CD186CE006A9750 /* Progress Note 2.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Progress Note 2.1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34E49D5F2CE6F66700D2E1BD /* ManagedProblem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedProblem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		34E49D602CE6F66700D2E1BD /* ManagedProblem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedProblem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		34E49D612CE6F66700D2E1BD /* Patient+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		34E49D622CE6F66700D2E1BD /* Patient+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		34E49D632CE6F66700D2E1BD /* ProgressNote+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressNote+CoreDataClass.swift"; sourceTree = "<group>"; };
+		34E49D642CE6F66700D2E1BD /* ProgressNote+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressNote+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +90,12 @@
 		340B81092CD186CD006A9750 = {
 			isa = PBXGroup;
 			children = (
+				34E49D5F2CE6F66700D2E1BD /* ManagedProblem+CoreDataClass.swift */,
+				34E49D602CE6F66700D2E1BD /* ManagedProblem+CoreDataProperties.swift */,
+				34E49D612CE6F66700D2E1BD /* Patient+CoreDataClass.swift */,
+				34E49D622CE6F66700D2E1BD /* Patient+CoreDataProperties.swift */,
+				34E49D632CE6F66700D2E1BD /* ProgressNote+CoreDataClass.swift */,
+				34E49D642CE6F66700D2E1BD /* ProgressNote+CoreDataProperties.swift */,
 				340B81142CD186CD006A9750 /* Progress Note 2.1 */,
 				340B812A2CD186CE006A9750 /* Progress Note 2.1Tests */,
 				340B81342CD186CE006A9750 /* Progress Note 2.1UITests */,
@@ -236,6 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34E49D652CE6F66700D2E1BD /* Patient+CoreDataClass.swift in Sources */,
+				34E49D662CE6F66700D2E1BD /* ManagedProblem+CoreDataProperties.swift in Sources */,
+				34E49D672CE6F66700D2E1BD /* Patient+CoreDataProperties.swift in Sources */,
+				34E49D682CE6F66700D2E1BD /* ProgressNote+CoreDataClass.swift in Sources */,
+				34E49D692CE6F66700D2E1BD /* ProgressNote+CoreDataProperties.swift in Sources */,
+				34E49D6A2CE6F66700D2E1BD /* ManagedProblem+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

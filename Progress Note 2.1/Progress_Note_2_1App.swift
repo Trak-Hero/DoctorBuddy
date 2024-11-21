@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct Progress_Note_2_1App: App {
-    let persistenceController = PersistenceController.shared
+    @StateObject private var authManager = AuthManager() // Initialize AuthManager
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(authManager) // Provide AuthManager
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
     }
 }

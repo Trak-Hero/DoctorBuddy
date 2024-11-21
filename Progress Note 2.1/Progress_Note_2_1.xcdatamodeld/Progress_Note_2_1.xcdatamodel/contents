@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
     </entity>
-    <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
-    </elements>
+    <entity name="ManagedProblem" representedClassName=".ManagedProblem" syncable="YES">
+        <attribute name="clinicalStatus" optional="YES" attributeType="String"/>
+        <attribute name="descriptionP" optional="YES" attributeType="String"/>
+        <relationship name="progressNote" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProgressNote" inverseName="probList" inverseEntity="ProgressNote"/>
+    </entity>
+    <entity name="Patient" representedClassName=".Patient" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="contactInfo" optional="YES" attributeType="String"/>
+        <attribute name="dateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gender" optional="YES" attributeType="String"/>
+        <attribute name="hospitalNumber" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="medicalHistory" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="progressNotes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProgressNote" inverseName="patient" inverseEntity="ProgressNote"/>
+    </entity>
+    <entity name="ProgressNote" representedClassName=".ProgressNote" syncable="YES">
+        <attribute name="abdomen" optional="YES" attributeType="String"/>
+        <attribute name="assessmentProblems" optional="YES" attributeType="Transformable"/>
+        <attribute name="assessmentStatus" optional="YES" attributeType="Transformable"/>
+        <attribute name="attribute" optional="YES" attributeType="String"/>
+        <attribute name="clinicalStatus" optional="YES" attributeType="String"/>
+        <attribute name="cvs" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="evm" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="evmEYE" optional="YES" attributeType="String"/>
+        <attribute name="evmMOTOR" optional="YES" attributeType="String"/>
+        <attribute name="evmVerbal" optional="YES" attributeType="String"/>
+        <attribute name="extremities" optional="YES" attributeType="String"/>
+        <attribute name="generalAppearance" optional="YES" attributeType="String"/>
+        <attribute name="htEar" optional="YES" attributeType="String"/>
+        <attribute name="htEyes" optional="YES" attributeType="String"/>
+        <attribute name="htHead" optional="YES" attributeType="String"/>
+        <attribute name="htNose" optional="YES" attributeType="String"/>
+        <attribute name="htThroat" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="investigations" optional="YES" attributeType="String"/>
+        <attribute name="neuroExam" optional="YES" attributeType="String"/>
+        <attribute name="objectiveDiastolicBP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="objectiveHeartRate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="objectiveRespiratoryRate" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="objectiveSystolicBP" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="objectiveTemperature" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pelvicExam" optional="YES" attributeType="String"/>
+        <attribute name="plan" optional="YES" attributeType="String"/>
+        <attribute name="prExam" optional="YES" attributeType="String"/>
+        <attribute name="problemList" optional="YES" attributeType="Transformable"/>
+        <attribute name="rs" optional="YES" attributeType="String"/>
+        <attribute name="subjective" optional="YES" attributeType="String"/>
+        <relationship name="patient" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="progressNotes" inverseEntity="Patient"/>
+        <relationship name="probList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManagedProblem" inverseName="progressNote" inverseEntity="ManagedProblem"/>
+    </entity>
 </model>
